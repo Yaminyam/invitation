@@ -14,7 +14,7 @@ app.use(express.json());
 app.get("/", async (req, res) => {
 	try {
 		const { data } = await octokit.request("GET /orgs/{org}", {
-			org: "42seoul-translation",
+			org: "AnA-algorithm",
 		});
 		return res.render("index", data);
 	} catch (error) {
@@ -30,7 +30,7 @@ app.post("/send-invitation", async (req, res) => {
 	const email = login.trim() + "@" + EMAIL_PROVIDER;
 	try {
 		const { data } = await octokit.request("POST /orgs/{org}/invitations", {
-			org: "42seoul-translation",
+			org: "AnA-algorithm",
 			email,
 		});
 		console.log(
