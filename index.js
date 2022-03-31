@@ -4,7 +4,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 const { Octokit } = require("@octokit/core");
 const octokit = new Octokit({ auth: process.env.GITHUB_ACCESS_TOKEN });
-const EMAIL_PROVIDER = "student.42seoul.kr";
+const EMAIL_PROVIDER = "o.cnu.ac.kr";
 
 app.use("/assets", express.static("assets"));
 app.set("view engine", "ejs");
